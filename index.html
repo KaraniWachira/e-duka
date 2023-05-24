@@ -1,55 +1,72 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-duka | Shop</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title> e-duka</title>
 </head>
+
 <body>
-    
-        <h2> e-duka</h2>
-        <div class="navbar">
-            <img src="/images/shop-logo.jpg" alt="logo">
-            <div class="search-components">
-                <form action "">
-                    <input type="text" name="search" placeholder="Search..." id="search">
-                    <button type="search">Search</button>
-                </form>
-            </div>
-            
-            <div class="nav-details">
-                <div class="cart">
-                    <img src="./images/cart.png" alt="cart" >
-                    <span>0</span>
-                </div>
-               </div>
-            </div>
-   
-     
-            <div class="hero-duka">
-                <div class="hero-duka-text">
-                    <h1>Shop with us</h1>
-                    <p>Get the best deals on all products</p>
-                    <!-- <img src="images/shoppers.jpg" alt="shoppers"> -->
-                </div>
-            </div>
 
-
-    <!-- product of the site begins -->
-        <main id="main-content">
-            <div id="product-list">
-               
-            </div>
-            <div id="product-details">
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"><h1>e-duka</h1></a>
+                </div>
+                <nav>
+                    <ul id="menu-items">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#list-products">Products</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <img class="cart-icon" src="./images/cart.png" alt="" width="30px" height="30px" onclick="toggleCart()">
+                        <span id="cart-count" class="cart-count">0</span>
+                    </ul>
+                </nav>
+                <div id="cart" class="hidden">
+                    <h2>Cart</h2>
+                    <div id="cart-items"></div>
+                    <p id="cart-total">Total: <span id="total-amount">0</span></p>
+                    <button id="clear-cart-button" onclick="clearCart()">Clear Cart</button>
+                </div>
                 
             </div>
-        </main>
 
-    <!--  products of the site ends -->
+            <div class="row">
+                <div class="col-2">
+                    <h1>Karibu <br> e-duka <br> a traquility of convinient Shopping</h1>
+                 
+                    <a href="#list-products" class="btn">shop now!</a>
+                </div>
 
-<script src="main.js"></script>
+                <!-- <div class="col-2">
+                    <img src="images/Coming soon.png" alt="">
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+    <h2 class="title">Products Available</h2>
+
+    <div class="products-container" id="list-products">
+        <div class="filter row-2">
+            <label for="categorySelect">Filter by Category:</label>
+            <select id="categorySelect">
+                <option value="">All Categories</option>
+            </select>
+        </div>
+
+        <div class="products">
+            <div class="product"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
 </body>
+
 </html>
